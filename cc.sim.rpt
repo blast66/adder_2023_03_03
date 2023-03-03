@@ -1,5 +1,5 @@
 Simulator report for cc
-Fri Mar 03 16:28:45 2023
+Fri Mar 03 17:01:17 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 36 nodes     ;
-; Simulation Coverage         ;      97.22 % ;
-; Total Number of Transitions ; 104          ;
+; Simulation Netlist Size     ; 69 nodes     ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Stratix II   ;
 +-----------------------------+--------------+
@@ -61,7 +61,7 @@ applicable agreement for further details.
 ; Simulation mode                                                                            ; Functional    ; Timing        ;
 ; Start time                                                                                 ; 0 ns          ; 0 ns          ;
 ; Simulation results format                                                                  ; CVWF          ;               ;
-; Vector input source                                                                        ; Waveform1.vwf ;               ;
+; Vector input source                                                                        ; Waveform3.vwf ;               ;
 ; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
 ; Check outputs                                                                              ; Off           ; Off           ;
 ; Report simulation coverage                                                                 ; On            ; On            ;
@@ -94,78 +94,178 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      97.22 % ;
-; Total nodes checked                                 ; 36           ;
-; Total output ports checked                          ; 36           ;
-; Total output ports with complete 1/0-value coverage ; 35           ;
-; Total output ports with no 1/0-value coverage       ; 1            ;
-; Total output ports with no 1-value coverage         ; 1            ;
-; Total output ports with no 0-value coverage         ; 1            ;
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 69           ;
+; Total output ports checked                          ; 69           ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 69           ;
+; Total output ports with no 1-value coverage         ; 69           ;
+; Total output ports with no 0-value coverage         ; 69           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                ;
-+--------------------+--------------------+------------------+
-; Node Name          ; Output Port Name   ; Output Port Type ;
-+--------------------+--------------------+------------------+
-; |decoder|y3~0      ; |decoder|y3~0      ; out              ;
-; |decoder|always0~0 ; |decoder|always0~0 ; out0             ;
-; |decoder|y3~1      ; |decoder|y3~1      ; out              ;
-; |decoder|always0~1 ; |decoder|always0~1 ; out0             ;
-; |decoder|always0~2 ; |decoder|always0~2 ; out0             ;
-; |decoder|always0~3 ; |decoder|always0~3 ; out0             ;
-; |decoder|comb~0    ; |decoder|comb~0    ; out0             ;
-; |decoder|y0~0      ; |decoder|y0~0      ; out0             ;
-; |decoder|comb~1    ; |decoder|comb~1    ; out0             ;
-; |decoder|y3$latch  ; |decoder|y3$latch  ; out              ;
-; |decoder|y0~1      ; |decoder|y0~1      ; out0             ;
-; |decoder|y2~0      ; |decoder|y2~0      ; out              ;
-; |decoder|comb~2    ; |decoder|comb~2    ; out0             ;
-; |decoder|y0~2      ; |decoder|y0~2      ; out0             ;
-; |decoder|y1~0      ; |decoder|y1~0      ; out              ;
-; |decoder|y2~1      ; |decoder|y2~1      ; out              ;
-; |decoder|y2$latch  ; |decoder|y2$latch  ; out              ;
-; |decoder|y0~3      ; |decoder|y0~3      ; out0             ;
-; |decoder|y0~4      ; |decoder|y0~4      ; out              ;
-; |decoder|y1~1      ; |decoder|y1~1      ; out              ;
-; |decoder|y2~2      ; |decoder|y2~2      ; out              ;
-; |decoder|comb~3    ; |decoder|comb~3    ; out0             ;
-; |decoder|y1$latch  ; |decoder|y1$latch  ; out              ;
-; |decoder|y3~2      ; |decoder|y3~2      ; out              ;
-; |decoder|comb~4    ; |decoder|comb~4    ; out0             ;
-; |decoder|comb~5    ; |decoder|comb~5    ; out0             ;
-; |decoder|comb~6    ; |decoder|comb~6    ; out0             ;
-; |decoder|comb~7    ; |decoder|comb~7    ; out0             ;
-; |decoder|y0$latch  ; |decoder|y0$latch  ; out              ;
-; |decoder|x0        ; |decoder|x0        ; out              ;
-; |decoder|x1        ; |decoder|x1        ; out              ;
-; |decoder|y0        ; |decoder|y0        ; pin_out          ;
-; |decoder|y1        ; |decoder|y1        ; pin_out          ;
-; |decoder|y2        ; |decoder|y2        ; pin_out          ;
-; |decoder|y3        ; |decoder|y3        ; pin_out          ;
-+--------------------+--------------------+------------------+
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------+
-; Missing 1-Value Coverage                         ;
-+------------+------------------+------------------+
-; Node Name  ; Output Port Name ; Output Port Type ;
-+------------+------------------+------------------+
-; |decoder|e ; |decoder|e       ; out              ;
-+------------+------------------+------------------+
++----------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                               ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |decoder3x3|x[0]                 ; |decoder3x3|x[0]                 ; out              ;
+; |decoder3x3|x[1]                 ; |decoder3x3|x[1]                 ; out              ;
+; |decoder3x3|x[2]                 ; |decoder3x3|x[2]                 ; out              ;
+; |decoder3x3|y[0]                 ; |decoder3x3|y[0]                 ; pin_out          ;
+; |decoder3x3|y[1]                 ; |decoder3x3|y[1]                 ; pin_out          ;
+; |decoder3x3|y[2]                 ; |decoder3x3|y[2]                 ; pin_out          ;
+; |decoder3x3|y[3]                 ; |decoder3x3|y[3]                 ; pin_out          ;
+; |decoder3x3|y[4]                 ; |decoder3x3|y[4]                 ; pin_out          ;
+; |decoder3x3|y[5]                 ; |decoder3x3|y[5]                 ; pin_out          ;
+; |decoder3x3|y[6]                 ; |decoder3x3|y[6]                 ; pin_out          ;
+; |decoder3x3|y[7]                 ; |decoder3x3|y[7]                 ; pin_out          ;
+; |decoder3x3|decoder:d1|y3~0      ; |decoder3x3|decoder:d1|y3~0      ; out              ;
+; |decoder3x3|decoder:d1|always0~0 ; |decoder3x3|decoder:d1|always0~0 ; out0             ;
+; |decoder3x3|decoder:d1|y3~1      ; |decoder3x3|decoder:d1|y3~1      ; out              ;
+; |decoder3x3|decoder:d1|always0~1 ; |decoder3x3|decoder:d1|always0~1 ; out0             ;
+; |decoder3x3|decoder:d1|always0~2 ; |decoder3x3|decoder:d1|always0~2 ; out0             ;
+; |decoder3x3|decoder:d1|always0~3 ; |decoder3x3|decoder:d1|always0~3 ; out0             ;
+; |decoder3x3|decoder:d1|comb~0    ; |decoder3x3|decoder:d1|comb~0    ; out0             ;
+; |decoder3x3|decoder:d1|y0~0      ; |decoder3x3|decoder:d1|y0~0      ; out0             ;
+; |decoder3x3|decoder:d1|comb~1    ; |decoder3x3|decoder:d1|comb~1    ; out0             ;
+; |decoder3x3|decoder:d1|y3        ; |decoder3x3|decoder:d1|y3        ; out              ;
+; |decoder3x3|decoder:d1|y0~1      ; |decoder3x3|decoder:d1|y0~1      ; out0             ;
+; |decoder3x3|decoder:d1|y2~0      ; |decoder3x3|decoder:d1|y2~0      ; out              ;
+; |decoder3x3|decoder:d1|comb~2    ; |decoder3x3|decoder:d1|comb~2    ; out0             ;
+; |decoder3x3|decoder:d1|y0~2      ; |decoder3x3|decoder:d1|y0~2      ; out0             ;
+; |decoder3x3|decoder:d1|y1~0      ; |decoder3x3|decoder:d1|y1~0      ; out              ;
+; |decoder3x3|decoder:d1|y2~1      ; |decoder3x3|decoder:d1|y2~1      ; out              ;
+; |decoder3x3|decoder:d1|y2        ; |decoder3x3|decoder:d1|y2        ; out              ;
+; |decoder3x3|decoder:d1|y0~3      ; |decoder3x3|decoder:d1|y0~3      ; out0             ;
+; |decoder3x3|decoder:d1|y0~4      ; |decoder3x3|decoder:d1|y0~4      ; out              ;
+; |decoder3x3|decoder:d1|y1~1      ; |decoder3x3|decoder:d1|y1~1      ; out              ;
+; |decoder3x3|decoder:d1|y2~2      ; |decoder3x3|decoder:d1|y2~2      ; out              ;
+; |decoder3x3|decoder:d1|comb~3    ; |decoder3x3|decoder:d1|comb~3    ; out0             ;
+; |decoder3x3|decoder:d1|y1        ; |decoder3x3|decoder:d1|y1        ; out              ;
+; |decoder3x3|decoder:d1|y3~2      ; |decoder3x3|decoder:d1|y3~2      ; out              ;
+; |decoder3x3|decoder:d1|comb~4    ; |decoder3x3|decoder:d1|comb~4    ; out0             ;
+; |decoder3x3|decoder:d1|comb~5    ; |decoder3x3|decoder:d1|comb~5    ; out0             ;
+; |decoder3x3|decoder:d1|comb~6    ; |decoder3x3|decoder:d1|comb~6    ; out0             ;
+; |decoder3x3|decoder:d1|comb~7    ; |decoder3x3|decoder:d1|comb~7    ; out0             ;
+; |decoder3x3|decoder:d1|y0        ; |decoder3x3|decoder:d1|y0        ; out              ;
+; |decoder3x3|decoder:d0|y3~0      ; |decoder3x3|decoder:d0|y3~0      ; out              ;
+; |decoder3x3|decoder:d0|always0~0 ; |decoder3x3|decoder:d0|always0~0 ; out0             ;
+; |decoder3x3|decoder:d0|y3~1      ; |decoder3x3|decoder:d0|y3~1      ; out              ;
+; |decoder3x3|decoder:d0|always0~1 ; |decoder3x3|decoder:d0|always0~1 ; out0             ;
+; |decoder3x3|decoder:d0|always0~2 ; |decoder3x3|decoder:d0|always0~2 ; out0             ;
+; |decoder3x3|decoder:d0|always0~3 ; |decoder3x3|decoder:d0|always0~3 ; out0             ;
+; |decoder3x3|decoder:d0|comb~0    ; |decoder3x3|decoder:d0|comb~0    ; out0             ;
+; |decoder3x3|decoder:d0|y0~0      ; |decoder3x3|decoder:d0|y0~0      ; out0             ;
+; |decoder3x3|decoder:d0|comb~1    ; |decoder3x3|decoder:d0|comb~1    ; out0             ;
+; |decoder3x3|decoder:d0|y3        ; |decoder3x3|decoder:d0|y3        ; out              ;
+; |decoder3x3|decoder:d0|y0~1      ; |decoder3x3|decoder:d0|y0~1      ; out0             ;
+; |decoder3x3|decoder:d0|y2~0      ; |decoder3x3|decoder:d0|y2~0      ; out              ;
+; |decoder3x3|decoder:d0|comb~2    ; |decoder3x3|decoder:d0|comb~2    ; out0             ;
+; |decoder3x3|decoder:d0|y0~2      ; |decoder3x3|decoder:d0|y0~2      ; out0             ;
+; |decoder3x3|decoder:d0|y1~0      ; |decoder3x3|decoder:d0|y1~0      ; out              ;
+; |decoder3x3|decoder:d0|y2~1      ; |decoder3x3|decoder:d0|y2~1      ; out              ;
+; |decoder3x3|decoder:d0|y2        ; |decoder3x3|decoder:d0|y2        ; out              ;
+; |decoder3x3|decoder:d0|y0~3      ; |decoder3x3|decoder:d0|y0~3      ; out0             ;
+; |decoder3x3|decoder:d0|y0~4      ; |decoder3x3|decoder:d0|y0~4      ; out              ;
+; |decoder3x3|decoder:d0|y1~1      ; |decoder3x3|decoder:d0|y1~1      ; out              ;
+; |decoder3x3|decoder:d0|y2~2      ; |decoder3x3|decoder:d0|y2~2      ; out              ;
+; |decoder3x3|decoder:d0|comb~3    ; |decoder3x3|decoder:d0|comb~3    ; out0             ;
+; |decoder3x3|decoder:d0|y1        ; |decoder3x3|decoder:d0|y1        ; out              ;
+; |decoder3x3|decoder:d0|y3~2      ; |decoder3x3|decoder:d0|y3~2      ; out              ;
+; |decoder3x3|decoder:d0|comb~4    ; |decoder3x3|decoder:d0|comb~4    ; out0             ;
+; |decoder3x3|decoder:d0|comb~5    ; |decoder3x3|decoder:d0|comb~5    ; out0             ;
+; |decoder3x3|decoder:d0|comb~6    ; |decoder3x3|decoder:d0|comb~6    ; out0             ;
+; |decoder3x3|decoder:d0|comb~7    ; |decoder3x3|decoder:d0|comb~7    ; out0             ;
+; |decoder3x3|decoder:d0|y0        ; |decoder3x3|decoder:d0|y0        ; out              ;
++----------------------------------+----------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------+
-; Missing 0-Value Coverage                         ;
-+------------+------------------+------------------+
-; Node Name  ; Output Port Name ; Output Port Type ;
-+------------+------------------+------------------+
-; |decoder|e ; |decoder|e       ; out              ;
-+------------+------------------+------------------+
++----------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                               ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |decoder3x3|x[0]                 ; |decoder3x3|x[0]                 ; out              ;
+; |decoder3x3|x[1]                 ; |decoder3x3|x[1]                 ; out              ;
+; |decoder3x3|x[2]                 ; |decoder3x3|x[2]                 ; out              ;
+; |decoder3x3|y[0]                 ; |decoder3x3|y[0]                 ; pin_out          ;
+; |decoder3x3|y[1]                 ; |decoder3x3|y[1]                 ; pin_out          ;
+; |decoder3x3|y[2]                 ; |decoder3x3|y[2]                 ; pin_out          ;
+; |decoder3x3|y[3]                 ; |decoder3x3|y[3]                 ; pin_out          ;
+; |decoder3x3|y[4]                 ; |decoder3x3|y[4]                 ; pin_out          ;
+; |decoder3x3|y[5]                 ; |decoder3x3|y[5]                 ; pin_out          ;
+; |decoder3x3|y[6]                 ; |decoder3x3|y[6]                 ; pin_out          ;
+; |decoder3x3|y[7]                 ; |decoder3x3|y[7]                 ; pin_out          ;
+; |decoder3x3|decoder:d1|y3~0      ; |decoder3x3|decoder:d1|y3~0      ; out              ;
+; |decoder3x3|decoder:d1|always0~0 ; |decoder3x3|decoder:d1|always0~0 ; out0             ;
+; |decoder3x3|decoder:d1|y3~1      ; |decoder3x3|decoder:d1|y3~1      ; out              ;
+; |decoder3x3|decoder:d1|always0~1 ; |decoder3x3|decoder:d1|always0~1 ; out0             ;
+; |decoder3x3|decoder:d1|always0~2 ; |decoder3x3|decoder:d1|always0~2 ; out0             ;
+; |decoder3x3|decoder:d1|always0~3 ; |decoder3x3|decoder:d1|always0~3 ; out0             ;
+; |decoder3x3|decoder:d1|comb~0    ; |decoder3x3|decoder:d1|comb~0    ; out0             ;
+; |decoder3x3|decoder:d1|y0~0      ; |decoder3x3|decoder:d1|y0~0      ; out0             ;
+; |decoder3x3|decoder:d1|comb~1    ; |decoder3x3|decoder:d1|comb~1    ; out0             ;
+; |decoder3x3|decoder:d1|y3        ; |decoder3x3|decoder:d1|y3        ; out              ;
+; |decoder3x3|decoder:d1|y0~1      ; |decoder3x3|decoder:d1|y0~1      ; out0             ;
+; |decoder3x3|decoder:d1|y2~0      ; |decoder3x3|decoder:d1|y2~0      ; out              ;
+; |decoder3x3|decoder:d1|comb~2    ; |decoder3x3|decoder:d1|comb~2    ; out0             ;
+; |decoder3x3|decoder:d1|y0~2      ; |decoder3x3|decoder:d1|y0~2      ; out0             ;
+; |decoder3x3|decoder:d1|y1~0      ; |decoder3x3|decoder:d1|y1~0      ; out              ;
+; |decoder3x3|decoder:d1|y2~1      ; |decoder3x3|decoder:d1|y2~1      ; out              ;
+; |decoder3x3|decoder:d1|y2        ; |decoder3x3|decoder:d1|y2        ; out              ;
+; |decoder3x3|decoder:d1|y0~3      ; |decoder3x3|decoder:d1|y0~3      ; out0             ;
+; |decoder3x3|decoder:d1|y0~4      ; |decoder3x3|decoder:d1|y0~4      ; out              ;
+; |decoder3x3|decoder:d1|y1~1      ; |decoder3x3|decoder:d1|y1~1      ; out              ;
+; |decoder3x3|decoder:d1|y2~2      ; |decoder3x3|decoder:d1|y2~2      ; out              ;
+; |decoder3x3|decoder:d1|comb~3    ; |decoder3x3|decoder:d1|comb~3    ; out0             ;
+; |decoder3x3|decoder:d1|y1        ; |decoder3x3|decoder:d1|y1        ; out              ;
+; |decoder3x3|decoder:d1|y3~2      ; |decoder3x3|decoder:d1|y3~2      ; out              ;
+; |decoder3x3|decoder:d1|comb~4    ; |decoder3x3|decoder:d1|comb~4    ; out0             ;
+; |decoder3x3|decoder:d1|comb~5    ; |decoder3x3|decoder:d1|comb~5    ; out0             ;
+; |decoder3x3|decoder:d1|comb~6    ; |decoder3x3|decoder:d1|comb~6    ; out0             ;
+; |decoder3x3|decoder:d1|comb~7    ; |decoder3x3|decoder:d1|comb~7    ; out0             ;
+; |decoder3x3|decoder:d1|y0        ; |decoder3x3|decoder:d1|y0        ; out              ;
+; |decoder3x3|decoder:d0|y3~0      ; |decoder3x3|decoder:d0|y3~0      ; out              ;
+; |decoder3x3|decoder:d0|always0~0 ; |decoder3x3|decoder:d0|always0~0 ; out0             ;
+; |decoder3x3|decoder:d0|y3~1      ; |decoder3x3|decoder:d0|y3~1      ; out              ;
+; |decoder3x3|decoder:d0|always0~1 ; |decoder3x3|decoder:d0|always0~1 ; out0             ;
+; |decoder3x3|decoder:d0|always0~2 ; |decoder3x3|decoder:d0|always0~2 ; out0             ;
+; |decoder3x3|decoder:d0|always0~3 ; |decoder3x3|decoder:d0|always0~3 ; out0             ;
+; |decoder3x3|decoder:d0|comb~0    ; |decoder3x3|decoder:d0|comb~0    ; out0             ;
+; |decoder3x3|decoder:d0|y0~0      ; |decoder3x3|decoder:d0|y0~0      ; out0             ;
+; |decoder3x3|decoder:d0|comb~1    ; |decoder3x3|decoder:d0|comb~1    ; out0             ;
+; |decoder3x3|decoder:d0|y3        ; |decoder3x3|decoder:d0|y3        ; out              ;
+; |decoder3x3|decoder:d0|y0~1      ; |decoder3x3|decoder:d0|y0~1      ; out0             ;
+; |decoder3x3|decoder:d0|y2~0      ; |decoder3x3|decoder:d0|y2~0      ; out              ;
+; |decoder3x3|decoder:d0|comb~2    ; |decoder3x3|decoder:d0|comb~2    ; out0             ;
+; |decoder3x3|decoder:d0|y0~2      ; |decoder3x3|decoder:d0|y0~2      ; out0             ;
+; |decoder3x3|decoder:d0|y1~0      ; |decoder3x3|decoder:d0|y1~0      ; out              ;
+; |decoder3x3|decoder:d0|y2~1      ; |decoder3x3|decoder:d0|y2~1      ; out              ;
+; |decoder3x3|decoder:d0|y2        ; |decoder3x3|decoder:d0|y2        ; out              ;
+; |decoder3x3|decoder:d0|y0~3      ; |decoder3x3|decoder:d0|y0~3      ; out0             ;
+; |decoder3x3|decoder:d0|y0~4      ; |decoder3x3|decoder:d0|y0~4      ; out              ;
+; |decoder3x3|decoder:d0|y1~1      ; |decoder3x3|decoder:d0|y1~1      ; out              ;
+; |decoder3x3|decoder:d0|y2~2      ; |decoder3x3|decoder:d0|y2~2      ; out              ;
+; |decoder3x3|decoder:d0|comb~3    ; |decoder3x3|decoder:d0|comb~3    ; out0             ;
+; |decoder3x3|decoder:d0|y1        ; |decoder3x3|decoder:d0|y1        ; out              ;
+; |decoder3x3|decoder:d0|y3~2      ; |decoder3x3|decoder:d0|y3~2      ; out              ;
+; |decoder3x3|decoder:d0|comb~4    ; |decoder3x3|decoder:d0|comb~4    ; out0             ;
+; |decoder3x3|decoder:d0|comb~5    ; |decoder3x3|decoder:d0|comb~5    ; out0             ;
+; |decoder3x3|decoder:d0|comb~6    ; |decoder3x3|decoder:d0|comb~6    ; out0             ;
+; |decoder3x3|decoder:d0|comb~7    ; |decoder3x3|decoder:d0|comb~7    ; out0             ;
+; |decoder3x3|decoder:d0|y0        ; |decoder3x3|decoder:d0|y0        ; out              ;
++----------------------------------+----------------------------------+------------------+
 
 
 +---------------------+
@@ -181,17 +281,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Mar 03 16:28:45 2023
+    Info: Processing started: Fri Mar 03 17:01:17 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off cc -c cc
-Info: Using vector source file "D:/新增資料夾/Waveform1.vwf"
+Info: Using vector source file "C:/新增資料夾/新增資料夾/Waveform3.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      97.22 %
-Info: Number of transitions in simulation is 104
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 0
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 158 megabytes
-    Info: Processing ended: Fri Mar 03 16:28:45 2023
+    Info: Processing ended: Fri Mar 03 17:01:17 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
