@@ -1,0 +1,15 @@
+module ccc(x, y, sum, carry);
+input x, y;
+output sum,carry;
+assign sum = x ^ y;
+assign carry = x & y;
+endmodule
+
+module F2_adder(x,y,cin,s,cout);
+input x, y, cin;
+output s, cout;
+wire s1,c1,c2;
+half_adder ha_1(x,y,s1,c1);
+half_adder ha_2(cin,s1,s,c2);
+or(cout ,c1, c2);
+endmodule
